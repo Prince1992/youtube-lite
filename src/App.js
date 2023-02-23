@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header } from './components/Header';
+import Header from './components/Header';
 import Feed from './components/Feed';
 import SearchResults from './components/SearchResults';
 import AppContext from './context/contextApi';
@@ -12,7 +12,7 @@ const App = () => {
         <div className="flex flex-col h-full">
           <Header />
           <Routes>
-            <Route path="/" element={<Feed />} />
+            <Route path="/" exact element={<Feed />} />
             <Route
               path="/searchResult/:searchQuery"
               element={<SearchResults />}
