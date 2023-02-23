@@ -4,7 +4,7 @@ import { fetchDataFromAPI } from '../utils/api';
 
 export const Context = createContext();
 
-export const AppContext = (props) => {
+const AppContext = (props) => {
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState();
   const [selectCategories, setSelectCategories] = useState('New');
@@ -39,3 +39,5 @@ export const AppContext = (props) => {
     </Context.Provider>
   );
 };
+
+export default AppContext;
